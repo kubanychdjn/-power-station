@@ -1,0 +1,157 @@
+@import "./fonts.css";
+
+:root {
+	--dark: #08116e00;
+	--light: rgb(233, 231, 231);
+	--crown: rgb(153, 153, 153);
+}
+
+/* BASE CONFIG */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Oswald", Arial, Helvetica, sans-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+button {
+	background: none;
+	border: none;
+}
+/* BASE CONFIG */
+
+.container {
+	max-width: 1230px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.col-4{
+    width: 33.33333%;
+    max-width: 387px;
+}
+.grid{
+	display: grid;
+}
+.grid__col-6{
+	grid-template-columns: 1fr 1fr ;
+}
+.grid__col-4{
+	grid-template-columns: repeat(3, 1fr);
+}
+.grid__col-3{
+	grid-template-columns: repeat(4, 1fr);
+}
+/* HEADER SECTION */
+.header{
+	position: relative;
+	top: 0;
+	height: calc(100vh - 60px);
+	height: 60px;
+}
+.header .container{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__logo{
+	font-size: 28px;
+}
+.header__link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+	margin-left: 15px;
+}
+/* HEADER SECTION */
+
+/* info section */
+
+.info{
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 30px;
+}
+.info__sm-title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.title{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.info__ms-title{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--dark);
+    padding: 10px;
+}
+
+
+/* info section */
+.noiceland{
+	padding: 80px;
+}
+.noiceland__grid{
+}
+.noiceland__card{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 40px; 
+	column-gap: 30px;
+}
+.noiceland__img{
+	height: 387px;
+	width: 254px;
+}
+.noiceland__grid > img{
+	font-size: 5vw;
+	padding: .5em;
+	text-align: center;
+}
+.noiceland__title{
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--crown);
+}
+.noiceland__sm-title{
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: var(--dark);
+}
+.noiceland__md-title{
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--dark);
+}
