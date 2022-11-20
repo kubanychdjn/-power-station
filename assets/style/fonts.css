@@ -1,24 +1,24 @@
 @font-face {
-    font-family: 'Tenor Sans';
-    src: url('TenorSans.eot');
-    src: url('TenorSans.eot?#iefix') format('embedded-opentype'),
-        url('TenorSans.woff2') format('woff2'),
-        url('TenorSans.woff') format('woff'),
-        url('TenorSans.ttf') format('truetype'),
-        url('TenorSans.svg#TenorSans') format('svg');
-    font-weight: 400;
+    font-family: 'Noto Sans';
+    src: url('../fonts/');
+    src: url('../fonts/?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+        url('../fonts/NotoSans-Bold.woff') format('woff'),
+        url('../fonts/NotoSans-Bold.ttf') format('truetype'),
+        url('../fonts/NotoSans-Bold.svg#NotoSans-Bold') format('svg');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Libre Franklin';
-    src: url('LibreFranklin-Bold.eot');
-    src: url('LibreFranklin-Bold.eot?#iefix') format('embedded-opentype'),
-        url('LibreFranklin-Bold.woff2') format('woff2'),
-        url('LibreFranklin-Bold.woff') format('woff'),
-        url('LibreFranklin-Bold.ttf') format('truetype'),
-        url('LibreFranklin-Bold.svg#LibreFranklin-Bold') format('svg');
+    font-family: 'Noto Sans';
+    src: url('../fonts/NotoSans-Regular.eot');
+    src: url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+        url('../fonts/NotoSans-Regular.woff') format('woff'),
+        url('../fonts/NotoSans-Regular.ttf') format('truetype'),
+        url('../fonts/NotoSans-Regular.svg#NotoSans-Regular') format('svg');
     font-weight: 400;
     font-style: normal;
     font-display: swap;

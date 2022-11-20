@@ -1,19 +1,22 @@
 @import "./fonts.css";
 
 :root {
-	--dark: #08116e00;
-	--light: rgb(233, 231, 231);
-	--crown: rgb(153, 153, 153);
+	--black: rgb(0, 0, 0);
+	--light: rgb(255, 255, 255);
+	--crown: rgb(128, 128, 128);
+    --gray: rgb(48, 48, 48);
 }
 
 /* BASE CONFIG */
-* {
+*,
+*::after,
+*::before{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 body {
-	font-family: "Oswald", Arial, Helvetica, sans-serif;
+	font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
 }
 a {
 	color: inherit;
@@ -25,8 +28,9 @@ button {
 }
 /* BASE CONFIG */
 
+/* UNIQUE */
 .container {
-	max-width: 1230px;
+	max-width: 1110px;
 	padding: 0 10px;
 	margin: 0 auto;
 }
@@ -51,107 +55,162 @@ button {
 .grid__col-3{
 	grid-template-columns: repeat(4, 1fr);
 }
+/* UNIQUE */
+
 /* HEADER SECTION */
 .header{
-	position: relative;
-	top: 0;
-	height: calc(100vh - 60px);
-	height: 60px;
+    background-image: url(../img/fon.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--light);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 10px 38px;
 }
-.header .container{
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.header__subtitle{
+    font-size: 18px;
+    line-height: 25px;
 }
-.header__logo{
-	font-size: 28px;
+.header__title{
+    font-weight: 700;
+    line-height: 87px;
+	font-size: 64px;
 }
-.header__link{
-    font-weight: 400;
-    font-size: 14px;
+.header__title span{
+    display: block;
+    font-size: 42px;
     line-height: 24px;
-	margin-left: 15px;
+}
+.button{
+}
+
+.button__text{
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block;
+    transform: translate(-57px, -17px);
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social__link{
+    padding: 0 10px;
 }
 /* HEADER SECTION */
 
-/* info section */
 
-.info{
+/*uslugi section */
+.solar{
+    padding-top: 100px;
 }
-.grid{
+.service__title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--crown);
+}
+.service__grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 40px;
-    column-gap: 30px;
-}
-.info__sm-title{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 10px;
-}
-.title{
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 42px;
-    text-transform: uppercase;
-    padding: 10px;
-}
-.info__ms-title{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--dark);
-    padding: 10px;
+    column-gap: 90px;
+    padding: 50px 0;
 }
 
+.solar__right{
+    background: url(../img/react.jpg) center/cover;
+}
+.service__left{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 50px;
+}
+.sm-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    color: var(--gray);
+}
+.md-desc{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color:  var(--gray);
+}
+/*uslugi section */
 
-/* info section */
-.noiceland{
-	padding: 80px;
+
+/* tarif section */
+.tarif{
+    padding-top: 150px;
 }
-.noiceland__grid{
+.tarif__grid{
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 90px;
 }
-.noiceland__card{
-	display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	row-gap: 40px; 
-	column-gap: 30px;
+.tarif-right{
+    display: grid;
+    grid-template-rows: 2fr 6fr;
 }
-.noiceland__img{
-	height: 387px;
-	width: 254px;
+.options__link{
+    margin-right: 40px;
 }
-.noiceland__grid > img{
-	font-size: 5vw;
-	padding: .5em;
-	text-align: center;
+.left__options{
+    margin-bottom: 125px;
 }
-.noiceland__title{
-	font-weight: 400;
-	font-size: 10px;
-	line-height: 12px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: var(--crown);
+.left__info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    margin-bottom: 100px;
 }
-.noiceland__sm-title{
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 24px;
-	text-transform: uppercase;
-	color: var(--dark);
+.info__desc{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--gray);
+
 }
-.noiceland__md-title{
-	font-weight: 700;
-	font-size: 10px;
-	line-height: 12px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: var(--dark);
+.left__blocks{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 17px;
 }
+
+.sm-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--gray);
+}
+.md-title{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--gray);
+}
+
+.right__text{
+    font-weight: 700;   
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--gray);
+}
+.right__img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/* tarif section */
